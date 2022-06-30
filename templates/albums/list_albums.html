@@ -6,10 +6,7 @@
   >
   {% for album in albums %}
   <div class="mb-5">
-    <p>Album: {{ album.title }}</p>
-    {% for artist in album.artist.all %}
-    <p>Artist: {{ artist.name }}</p>
-    {% endfor %}
+    <a href="{% url 'detail_album' pk=album.pk %}">Album: {{ album.title }}</a>
   </div>
   {% endfor %}
 </div>

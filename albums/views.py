@@ -19,3 +19,8 @@ def new_album(request):
 			form.save()
 			return redirect(to='list_albums')
 	return render(request, 'albums/new_album.html', {'form': form})
+
+
+def detail_album(request, pk):
+	album = get_object_or_404(Album, pk=pk)
+	return render(request, 'albums/detail_album.html', {'album': album})
