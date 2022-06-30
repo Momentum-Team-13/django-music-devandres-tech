@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block content %}
-<h1>Music App</h1>
-<div>
+<div class="container">
+  <h1 class="d-flex justify-content-center">Music App</h1>
   {% for album in albums %}
   <div>
-    <p>{{ album.title }}</p>
+    <p>Album: {{ album.title }}</p>
   </div>
   {% endfor %}
 </div>
