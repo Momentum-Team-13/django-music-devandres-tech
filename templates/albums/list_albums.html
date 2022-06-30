@@ -7,6 +7,7 @@
   {% for album in albums %}
   <div class="mb-5">
     <a href="{% url 'detail_album' pk=album.pk %}">Album: {{ album.title }}</a><br />
+    <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a><br />
     <a href="{% url 'edit_album' pk=album.pk %}">Edit album<a>
   </div>
   {% endfor %}
