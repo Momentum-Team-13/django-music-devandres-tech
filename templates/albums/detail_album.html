@@ -9,7 +9,9 @@
     <h1>{{ album.title}}</h1>
     {% for artist in album.artist.all %}
     <div class="mb-5">
-      <a>Artist: {{ artist.name }}</a>
+      <a href="{% url 'artist_album' pk=artist.pk %}"
+        >Artist: {{ artist.name }}</a
+      >
     </div>
     {% endfor %}
   </div>

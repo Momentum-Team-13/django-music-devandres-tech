@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <a
+    class="mb-5"
+    href="{% url 'list_albums' %}"
+    class="d-flex justify-content-start"
+    ><- Back Home</a
+  >
+  <div
+    class="d-flex flex-column align-items-center justify-content-center mb-5"
+  >
+    <div class="mb-5">
+      <h1>Add Artist</h1>
+    </div>
+    <div>
+      <form action="{% url 'new_artist' %}" method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <div>
+          <button class="btn btn-primary" type="submit">Add Artist</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

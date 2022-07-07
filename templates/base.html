@@ -29,13 +29,22 @@
     <title>Music App</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-primary">
-      <a class="navbar-brand" href="{% url 'list_albums' %}">Dem Jams</a>
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="{% url 'new_album' %}"
-          >Add new album</a
-        >
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="{% url 'list_albums' %}" class="navbar-brand" href="#"
+        >Dem Jams</a
+      >
+      <ul class="navbar-nav mr-auto d-flex">
+        <span class="navbar-text">
+          <a href="{% url 'new_album' %}" class="nav-link" href="#"
+            >New Album</a
+          >
+        </span>
+        <span class="navbar-text">
+          <a href="{% url 'new_artist' %}" class="nav-link" href="#"
+            >New Artist</a
+          >
+        </span>
+      </ul>
     </nav>
     <div>{% block content %} {% endblock %}</div>
   </body>
